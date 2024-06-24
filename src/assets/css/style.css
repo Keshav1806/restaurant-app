@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navhome {
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 4%;
+    border-bottom: 2px solid rgb(255, 225, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav .links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav .links a {
+    text-decoration: none;
+    color: white;
+    gap: 2px;
+    transition: all 0.3s;
+}
+
+.nav .links a:hover {
+    color: #ffc107;
+}
+
+.nav .icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav .icons div {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.nav img {
+    width: 75px;
+}
+
+.search-form {
+    position: absolute;
+    right: 7%;
+    top: 110%;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    transform: scaleY(0);
+    transition: all 0.3s;
+    width: 20rem;
+}
+
+.search-form.active {
+    transform: scaleY(1);
+}
+
+.search-form input:focus {
+    outline: none;
+}
+
+.search-form input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.search-form input {
+    border: none;
+    background-color: white;
+    width: 88%;
+}
+
+.search-form label {
+    margin-left: 1rem;
+}
+
+.cartcont {
+    background-color: white;
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    width: 19rem;
+    height: 100vh;
+    padding: 1.3rem 1rem;
+    padding-right: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s;
+    gap: 1.5rem;
+    border: 2px solid #ffc107;
+}
+
+.cartcont.active {
+    right: 0;
+}
+
+.cartcont .cartitem img {
+    height: 70px;
+    width: 29%;
+}
+
+.cartcont .cartitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartinfo {
+    margin-right: 2rem;
+}
+
+.cartinfo p {
+    color: #ffc107;
+    font-size: 0.85rem;
+}
+
+.cartinfo h3 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.cartcont .cartitem span {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.cartcont .check{
+    background-color: #ffc107;
+    text-align: center;
+    color: white;
+    padding: 0.4rem 0;
+}
+.cartmess{
+    text-align: center;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    border-radius: 30px;
+}
+#menu-btn {
+    display: none;
+}
+
+.home {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .9), rgba(68, 68, 68, .35)), url(https://codingcirculate-restaurant-design.on.fleek.co/static/media/home-img.965e18e60a1521e7e1af) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 1rem;
+}
+
+.content h1 {
+    font-size: 3.7rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+    color: white;
+}
+
+.content a {
+    background-color: #ffc107;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 10rem;
+    text-align: center;
+    color: white;
+}
+
+.content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: white;
+}
+
+.content h1 span {
+    color: #ffc107;
+}
+
+.about {
+    background-color: #000000;
+    padding: 1rem 7%;
+}
+
+.about h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about h1 span {
+    color: #ffc107;
+}
+
+.aboutinfo {
+    margin-top: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #151519;
+}
+
+.aboutinfo img {
+    width: 50%;
+}
+
+.inaboutinfo {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+
+.inaboutinfo h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.inaboutinfo a {
+    text-decoration: none;
+    background-color: #ffc107;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 9rem;
+    text-align: center;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.menu {
+    color: white;
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu h1 span {
+    color: #ffc107;
+}
+
+.menucont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 7%;
+}
+
+.menuitem {
+    border: 2px solid #ffc107;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    gap: 0.6rem;
+    border-radius: 8px;
+}
+.menuitem h3{
+    font-weight: 600;
+}
+.menuitem p{
+    font-size: 1.5rem;
+}
+.menuitem p span{
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+.menuitem button{
+    background-color: #ffc107;
+    border: none;
+    padding: 0.4rem 1.3rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.product{
+    color: white;
+}
+.product h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.product h1 span {
+    color: #ffc107;
+}
+.prodcont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 7%;
+}
+.proditem{
+    border: 2px solid #ffc107 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 0.5rem;
+    border-radius: 8px;
+}
+.proditem .icons{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.proditem .icons div{
+    border: 2px solid #ffc107;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.proditem img{
+    width: 14rem;
+    transition: all 0.4s;
+}
+.proditem h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.stars{
+    color: #ffc107;
+}
+.proditem p{
+    font-size: 1.5rem;
+}
+.proditem p span{
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+.prodinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.active1{
+    transform: scale(1.6);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.active2{
+    display: none;
+}
+.review{
+    color: white;
+}
+.review h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.review h1 span {
+    color: #ffc107;
+}
+.reviewcont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 7%;
+}
+.reviewitem{
+    border: 2px solid #ffc107;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 2rem;
+    gap: 1rem;
+}
+.reviewitem p{
+    text-align: center;
+}
+.revimg{
+    width: 4.5rem;
+    border-radius: 40px;
+}
+.contact{
+    color: white;
+}
+.contact h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contact h1 span {
+    color: #ffc107;
+}
+.contactinfo{
+    padding: 1rem 7%;
+}
+.incontactinfo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #151519;
+}
+.map{
+    flex-basis: 50%;
+}
+.contactform{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5% 2rem;
+}
+.contactform h2{
+    font-size: 2.3rem;
+    font-weight: 600;
+
+}
+.contactform .inputBox{
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    gap: 1.2rem;
+    padding: 1rem;
+    width: 100%;
+}
+.contactform .inputBox input{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.contactform .inputBox input:focus {
+    outline: none;
+}
+.contactform a{
+    text-decoration: none;
+    color: white;
+    background-color: #ffc107;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+}
+.blog{
+    color: white;
+}
+.blog h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.blog h1 span {
+    color: #ffc107;
+}
+.blogcont{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 7%;
+}
+.blogitem{
+    border: 2px solid #ffc107;
+}
+.blogitem img{
+    width: 100%;
+    transition: all 0.3s;
+}
+.blogitem:hover .img img{
+    transform: scale(1.2);
+}
+.bloginfo{
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.bloginfo h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.bloginfo h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffc107;
+}
+.bloginfo p{
+    font-size: 1.1rem;
+}
+.bloginfo a{
+    text-decoration: none;
+    color: white;
+    background-color: #ffc107;
+    width: 38%;
+    text-align: center;
+    padding: 0.3rem 0.4rem;
+    margin-top: 0.7rem;
+}
+.blogitem .img{
+    overflow: hidden;
+}
+.footer{
+    color: white;
+    background-color: #151519;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+.footer .icons{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer .icons a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    border: 2px solid #ffc107;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.footer .links2{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer .links2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    border: 2px solid #ffc107;
+    padding: 0.3rem 1rem;
+}
+.footer p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.footer p span{
+    color: #ffc107;
+}
+
+/* ---------------MEDIA QUERY------------ */
+@media (max-width: 515px) {
+    .search-form{
+        width: 85%;
+    }
+    .contactform h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 887px) {
+    #menu-btn {
+        display: block;
+    }
+
+    .links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 17rem;
+        padding: 2rem 1.5rem;
+        transition: all 0.3s;
+        height: 100vh;
+        background-color: black;
+    }
+
+    .links.active {
+        right: 0;
+    }
+
+    .links a {
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 822px) {
+    .content h1 {
+        font-size: 3.1rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 724px) {
+    .home {
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .content a {
+        width: auto;
+    }
+
+    .content h1 {
+        font-size: 2.7rem;
+        line-height: 3.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1342px) {
+    .inaboutinfo h2 {
+        margin-bottom: 0.7rem;
+    }
+
+    .inaboutinfo a {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1242px) {
+    .inaboutinfo h2 {
+        font-size: 1.6rem;
+    }
+
+    .inaboutinfo p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1070px) {
+    .inaboutinfo{
+        padding: 1rem;
+    }
+    .aboutinfo {
+        flex-direction: column;
+    }
+
+    .aboutinfo img {
+        width: 100%;
+    }
+    .incontactinfo{
+        flex-direction: column;
+    }
+}
